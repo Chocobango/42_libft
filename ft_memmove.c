@@ -6,7 +6,7 @@
 /*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 20:52:45 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/27 18:32:49 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/10/28 20:29:14 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int main ()
   puts (str);
   puts (str+20);
   puts (str+15);
-  memmove (str+20, str+15, 15);
+  ft_memmove (str+20, str+15, 15);
   puts (str);
   return 0;
 }
