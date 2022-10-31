@@ -45,5 +45,6 @@ int main(void)
 	printf("%s\n", s1);
 	printf("%s\n", memcpy(s, s1, 2));
 	printf("%s\n", s);
+	printf("%s\n", memcpy(NULL, s, 1));
 	return (0);
 }

@@ -13,22 +13,22 @@
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char uc;
-	unsigned char *str;
-	size_t i;
+	unsigned char	uc;
+	unsigned char	*str;
+	size_t			i;
 
 	i = 0;
 	uc = (unsigned char)c;
 	str = (unsigned char *)s;
-	while(str[i] && (i < n))
+	while (str[i] && (i < n))
 	{
 		if (str[i] == uc)
 			return (str + i);
 		i++;
 	}
-	return NULL;
+	return (NULL);
 }
 
 void test(const void *s, int c, size_t n)
