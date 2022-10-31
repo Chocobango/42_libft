@@ -14,40 +14,43 @@
 #include <string.h>
 #include <stdlib.h>
 
-// Should I throw an error about overflow like in the original? 
+// Should I throw an error about overflow like in the original?
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *buf;
-	const char *s;
-	char *d;
-	size_t i;
+	const char	*s;
+	char		*d;
+	size_t		i;
 
-	i = 0;
 	s = src;
 	d = dst;
-	buf = malloc(len);
-	while (i < len)
+	if (dst < src)
 	{
-		buf[i] = s[i];
-		i++;
+		i = 0;
+		while (i < len)
+		{
+			d[i] = s[i];
+			i++;
+		}
 	}
-	while(i > 0)
+	else
 	{
-		i--;
-		d[i] = buf[i];
+		while (len)
+		{
+			d[len - 1] = s[len - 1];
+			len--;
+		}
 	}
-	free(buf);
-	return dst;
+	return (dst);
 }
 
-int main ()
+int main(void)
 {
-  char str[] = "what do you know about it she asked, clueless";
-  puts (str);
-  puts (str+20);
-  puts (str+15);
-  ft_memmove (str+20, str+15, 15);
-  puts (str);
-  return 0;
+	char str[] = "what do you know about it she asked, clueless";
+	puts(str);
+	puts(str + 20);
+	puts(str + 15);
+	ft_memmove(str + 15, str + 20, 10);
+	puts(str);
+	return 0;
 }

@@ -43,7 +43,7 @@ int main(void)
 		s1[i] = i + '0';
 	printf("%s\n", s);
 	printf("%s\n", s1);
-	printf("%s\n", memcpy(s, s1, 5));
+	printf("%s\n", memcpy(s, s1, 2));
 	printf("%s\n", s);
 	return (0);
 }
