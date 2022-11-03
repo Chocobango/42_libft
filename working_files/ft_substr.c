@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 22:18:20 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/03 23:04:01 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/03 23:07:16 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     char    *res;
     
     s_len = ft_strlen(s);
-    printf("s length is %lu\n", s_len);
+//    printf("s length is %lu\n", s_len);
     if (s_len < start)
         res_len = 0;
     else
         res_len = min(len, s_len - start);
-    printf("res length is %lu\n", res_len);
+//    printf("res length is %lu\n", res_len);
     if (res_len < 0) res_len = 0;
     res = malloc(sizeof(char) * res_len + 1);
     if (!res) return NULL;
@@ -70,8 +70,12 @@ int main(void)
     test("a", 3, 15);
     test("", 0, 15);
     test("", 15, 0);
+    test("hellllllllo", 5, 5);
+    test("hellllllllo", 5, 6);
     test("hellllllllo", 5, 7);
+    test("hellllllllo", 5, 8);
     test("hellllllllo", 20, 7);
     test("hellllllllo", 2, 0);
+    test("hellllllllo", 0, 1);
     return (0);
 }
