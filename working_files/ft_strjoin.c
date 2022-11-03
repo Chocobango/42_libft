@@ -6,17 +6,20 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:08:17 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/03 23:21:53 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/03 23:28:19 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Return value: The new string.
-    NULL if the allocation fails.
-External functs. malloc
-Description: Allocates (with malloc(3)) and returns a new
-    string, which is the result of the concatenation
-    of ’s1’ and ’s2’.
+Return value:
+            The new string.
+            NULL if the allocation fails.
+External functs.
+            malloc
+Description:
+            Allocates (with malloc(3)) and returns a new
+            string, which is the result of the concatenation
+            of ’s1’ and ’s2’.
 */
 
 #include <stdlib.h>

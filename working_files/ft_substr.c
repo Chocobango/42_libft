@@ -6,22 +6,26 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 22:18:20 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/03 23:22:40 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/03 23:29:02 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Parameters: s: The string from which to create the substring.
-    start: The start index of the substring in the
-        string ’s’.
-    len: The maximum length of the substring.
-Return value: The substring.
-    NULL if the allocation fails.
-External functs.: malloc
-Description: Allocates (with malloc(3)) and returns a substring
-    from the string ’s’.
-    The substring begins at index ’start’ and is of
-    maximum size ’len’.
+Parameters:
+            s: The string from which to create the substring.
+            start: The start index of the substring in the
+                string ’s’.
+            len: The maximum length of the substring.
+Return value:
+            The substring.
+            NULL if the allocation fails.
+External functs.:
+            malloc
+Description:
+            Allocates (with malloc(3)) and returns a substring
+            from the string ’s’.
+            The substring begins at index ’start’ and is of
+            maximum size ’len’.
 */
 
 #include <stdlib.h>
