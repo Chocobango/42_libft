@@ -1,0 +1,35 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/11/04 20:11:58 by vvagapov          #+#    #+#              #
+#    Updated: 2022/11/04 21:19:04 by vvagapov         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = libft.a
+
+SRC = 	ft_atoi.c \
+
+FLAGS = -Wall -Wextra -Werror
+
+OBJ = 	ft_atoi.o \
+
+all: ${NAME}
+
+${NAME}:
+	cc -c ${FLAGS} ${SRC}
+	ar rc -s ${NAME} ${OBJ}
+
+clean:
+	rm -f ${OBJ}
+
+fclean: clean
+	rm -f ${NAME}
+
+re: fclean all
+
+.PHONY: all clean fclean re

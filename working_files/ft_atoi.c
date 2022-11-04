@@ -6,13 +6,13 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 20:10:08 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/04 19:31:48 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/04 21:17:29 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+/* #include <stdlib.h>
 #include <stdio.h>
-#include <limits.h>
+#include <limits.h> */
 
 // TODO: use strtol !
 
@@ -39,7 +39,7 @@ int ft_atoi(const char *str)
         res = res * 10 + (*s++ - '0');
     return ((int)res * sign);
 }
-
+/* 
 void test(const char *str)
 {
     printf("%s -> %d : %d\n", str, atoi(str), ft_atoi(str));
@@ -67,4 +67,4 @@ int main(void)
     test("-3-5f575h");
     test("");
     return (0);
-}
+} */
