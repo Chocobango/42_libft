@@ -6,13 +6,15 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 20:10:08 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/31 20:40:45 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/04 19:31:48 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <limits.h>
+
+// TODO: use strtol !
 
 int ft_atoi(const char *str)
 {
