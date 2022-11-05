@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:26:03 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 18:25:38 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 18:43:24 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ static size_t min(size_t a, size_t b)
     else return (b);
 }
  */
+
 static char    setIncludesChar(char const *str, char c)
 {    
     while(*str)

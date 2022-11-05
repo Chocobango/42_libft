@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:26:03 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/04 19:59:58 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 18:03:07 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,47 +27,14 @@ Description:
 
 #include <stdio.h>
 #include <stdlib.h>
-
-size_t ft_strlen(const char *s)
-{
-	size_t res;
-	
-	res = 0;
-	while (s[res])
-		res++;
-	return res;
-}
-
+#include "libft.h"
+/* 
 static size_t min(size_t a, size_t b)
 {
     if (a < b) return (a);
     else return (b);
 }
-
-// What shall we do if s is NULL?
-char    *ft_substr(char const *s, unsigned int start, size_t len)
-{
-    size_t  s_len;
-    size_t  res_len;
-    char    *res;
-    
-    s_len = ft_strlen(s);
-    if (s_len < start)
-        res_len = 0;
-    else
-        res_len = min(len, s_len - start);
-    if (res_len < 0) res_len = 0;
-    res = malloc(sizeof(char) * res_len + 1);
-    if (!res) return NULL;
-    res[res_len] = '\0';
-    while (res_len)
-    {
-        res_len--;
-        res[res_len] = s[start + res_len];
-    }
-    return res;
-}
-
+ */
 char    setIncludesChar(char const *str, char c)
 {    
     while(*str)
@@ -116,13 +83,37 @@ char *ft_strtrim(char const *s1, char const *set)
     return ft_substr(s1, start_i, end_i - start_i);
 }
 
-void test(char const *s1, char const *set)
+static int	ft_test(const char *input, char const *set, const char *reference)
 {
+	char	*trimmed_str;
+	int		result;
 
+	trimmed_str = ft_strtrim(input);
+	if (!trimmed_str)
+	{
+		printf("Memory allocation error.\n");
+		exit(42);
+	}
+	result = strcmp(reference, trimmed_str);
+    printf("trimming '%s' from '%s': '%s' -> '%s'\n",
+        set, input, reference, trimmed_str);
+	free(trimmed_str);
+	return (result);
+}
+
+void ft_test(char const *s1, char const *set)
+{
+    printf("trimming '%s' from '%s': '%s' -> '%s'\n",);
 }
 
 int main(void)
 {
-    
+    ft_test(" ", " h", "");
+	ft_test(" \t\n\t ", "\n\t \v", "");
+	ft_test("\tbest\n", "\n\t \v", "best");
+	ft_test("O \t\n K", "\n\t \v", "O \t\n K");
+	ft_test("continue", "\n\t \v", "continue");
+	ft_test("break ;", "\n\t \v", "break ;");
+	ft_test(" One Night in Tokyo\t", "\n\t \v", "One Night in Tokyo");
     return (0);
 }
