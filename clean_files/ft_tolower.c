@@ -3,15 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:14:48 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/27 23:16:29 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:37:06 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <ctype.h>
 
 int ft_tolower(int c)
 {
@@ -23,7 +20,7 @@ int ft_tolower(int c)
 	else
 		return c;
 }
-
+/* 
 void test(int c)
 {
 	printf("%d or %u or %c : should be: %d or %u or %c, mine: %d or %u or %c\n",
@@ -46,3 +43,4 @@ int main(void)
 	test(uc);
 	return 0;
 }
+ */

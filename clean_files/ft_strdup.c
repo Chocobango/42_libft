@@ -6,12 +6,10 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 21:41:33 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/03 22:17:52 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:26:26 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include <errno.h>
 #include <stdlib.h>
 
@@ -38,7 +36,7 @@ char    *ft_strdup(const char *s1)
     }
     return s2;
 }
-
+/* 
 void test(const char *s)
 {
     char *copy = strdup(s);
@@ -55,3 +53,4 @@ int main(void)
     test("");
     return (0);
 }
+ */

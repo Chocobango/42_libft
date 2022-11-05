@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:43:37 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/27 22:53:29 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:33:18 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 // First the function looks for terminating 0 in dst.
 // If 0 wasn't found within the buffer size, stop.
@@ -48,7 +47,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (i + dst_len);
 }
-
+/* 
 void test(int size)
 {
     char string[] = "Hello";
@@ -83,3 +82,4 @@ int main(void)
 
     return(0);
 }
+ */

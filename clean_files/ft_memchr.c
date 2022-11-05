@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 16:37:54 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/28 18:25:42 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:23:36 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -30,7 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
+/* 
 void test(const void *s, int c, size_t n)
 {
 	printf("Searching for '%c' or '%u' in %lu bytes of '%s': '%s' -> '%s'\n",
@@ -47,3 +46,4 @@ int main(void)
 	test("hello there polly", 'l', 22);
 	return 0;
 }
+ */

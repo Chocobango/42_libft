@@ -6,12 +6,9 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:33:04 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:20:21 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:21:43 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <ctype.h>
-#include <stdio.h>
 
 int ft_isalpha(int c)
 {

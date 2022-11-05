@@ -6,13 +6,11 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:48:12 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/31 20:09:43 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:34:52 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -31,7 +29,7 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
     }
     return (NULL);
 }
-
+/* 
 void    test(const char *haystack, const char *needle, size_t len)
 {
     printf("Searching for '%s' in %lu chars of '%s' -> '%s': %s\n",
@@ -53,3 +51,4 @@ int main(void)
     test("", "6905", 30);
     return (0);
 }
+ */

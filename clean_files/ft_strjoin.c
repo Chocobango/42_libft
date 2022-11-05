@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:08:17 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/03 23:28:19 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:30:52 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,11 @@ Description:
 */
 
 #include <stdlib.h>
-#include <stdio.h>
-
-static size_t ft_strlen(const char *s)
-{
-	size_t res;
-	
-	res = 0;
-	while (s[res])
-		res++;
-	return res;
-}
+#include "libft.h"
 
 // What shall we do if s1 or s2 are NULL?
 char    *ft_strjoin(char const *s1, char const *s2)
 {
-//    size_t  res_len;
     size_t  s1_len;
     size_t  s2_len;
     char    *res;
@@ -61,6 +50,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
     return res;
 }
 
+/* 
 void test(char const *s1, char const *s2)
 {
     printf("'%s' + '%s' = '%s'\n", s1, s2, ft_strjoin(s1, s2));
@@ -74,4 +64,5 @@ int main(void)
     test("", "");
     test("1", "2");
     return(0);
-}
+} 
+*/

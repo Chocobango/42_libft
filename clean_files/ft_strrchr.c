@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:39:02 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/27 23:48:08 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:35:32 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 // Go till the end of the string, remember last match if it exists.
 // If search was looking for '\0', return address of the end of the string.
@@ -36,7 +35,7 @@ char *ft_strrchr(const char *s, int c)
 	else
 		return res;
 }
-
+/* 
 void test(const char *s, int c)
 {
 	printf("Searching for '%c' in '%s': '%s' -> '%s'\n",
@@ -55,3 +54,4 @@ int main(void)
 	test(s, 0);
 	return 0;
 }
+ */

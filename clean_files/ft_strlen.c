@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:19:07 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/25 18:01:39 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:34:13 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include <stdlib.h>
 
 size_t ft_strlen(const char *s)
 {
@@ -22,10 +21,11 @@ size_t ft_strlen(const char *s)
 		res++;
 	return res;
 }
-
+/* 
 int main(void)
 {
 	char *s = "	 ";
 	printf("%s: %lu - %lu\n", s, strlen(s), ft_strlen(s));	
 	return(0);
 }
+ */

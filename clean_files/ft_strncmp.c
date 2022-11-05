@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 15:01:43 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/28 16:27:52 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:34:36 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -25,6 +24,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (unsigned char)s1[i] - (unsigned char)s2[i];
 }
 
+/* 
 void test(const char *s1, const char *s2, size_t n)
 {
 	printf("'%s' and '%s', %lu chars: %d -> %d\n",
@@ -54,3 +54,4 @@ int main(void)
 	test(s1, s2, 1);
 	return(0);
 }
+ */

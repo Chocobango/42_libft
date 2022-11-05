@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:31:24 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/28 18:47:28 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:24:20 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -30,7 +29,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
+/* 
 void test(const void *s1, const void *s2, size_t n)
 {
 	printf("'%s' vs '%s', %lu bytes: %d -> %d\n",
@@ -48,3 +47,4 @@ int  main(void)
 	test("", ".", 0);
 	return (0);
 }
+ */

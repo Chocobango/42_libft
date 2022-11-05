@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 22:18:20 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/04 18:28:13 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:36:49 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,7 @@ Description:
 */
 
 #include <stdlib.h>
-#include <stdio.h>
-
-static size_t ft_strlen(const char *s)
-{
-	size_t res;
-	
-	res = 0;
-	while (s[res])
-		res++;
-	return res;
-}
+#include "libft.h"
 
 static size_t min(size_t a, size_t b)
 {
@@ -55,12 +45,10 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     char    *res;
     
     s_len = ft_strlen(s);
-//    printf("s length is %lu\n", s_len);
     if (s_len < start)
         res_len = 0;
     else
         res_len = min(len, s_len - start);
-//    printf("res length is %lu\n", res_len);
     if (res_len < 0) res_len = 0;
     res = malloc(sizeof(char) * res_len + 1);
     if (!res) return NULL;
@@ -72,7 +60,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     }
     return res;
 }
-
+/* 
 void test(char const *s, unsigned int start, size_t len)
 {
     printf("\t'%s' from %u for %lu: '%s'\n",
@@ -97,3 +85,4 @@ int main(void)
     test("hellllllllo", 0, 1);
     return (0);
 }
+ */

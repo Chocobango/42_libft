@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 21:09:36 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 16:50:29 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:30:42 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void    *ft_calloc(size_t count, size_t size)
     }
     return (void *)res;
 }
+
 /* 
 int main(void)
 {

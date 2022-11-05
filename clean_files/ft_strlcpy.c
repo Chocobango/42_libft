@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:34:31 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/27 20:06:30 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:33:44 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -34,7 +33,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (i);
 }
 
-
+/* 
 void test(int size)
 {
     char string[] = "Hello there, V";
@@ -59,3 +58,4 @@ int main(void)
 
     return(0);
 }
+ */

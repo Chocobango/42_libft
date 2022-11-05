@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:16:59 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/26 20:47:02 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:24:31 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
 void *ft_memcpy(void *dst, const void *src, size_t n)
@@ -30,7 +28,7 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return dst;
 }
-
+/* 
 int main(void)
 {
 	char *s = malloc(sizeof(char) * 10);
@@ -48,3 +46,4 @@ int main(void)
 	printf("%s\n", memcpy(NULL, s, 1));
 	return (0);
 }
+ */

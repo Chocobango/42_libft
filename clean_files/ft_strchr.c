@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:18:17 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/27 23:50:13 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:25:55 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
+#include <stdlib.h>
 
 // Go through the string until the end or until the match is found.
 // If needle wasn't '\0' and nothing was found, return NULL,
@@ -31,7 +29,7 @@ char *ft_strchr(const char *s, int c)
 	else
 		return res;
 }
-
+/* 
 void test(const char *s, int c)
 {
 	printf("Searching for '%c' in '%s': '%s' -> '%s'\n",
@@ -50,3 +48,4 @@ int main(void)
 	test(s, 0);
 	return 0;
 }
+ */
