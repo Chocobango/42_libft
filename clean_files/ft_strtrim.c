@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:26:03 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:42:09 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 18:25:38 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Description:
             from the beginning and the end of the string.
 */
 
-#include <stdlib.h>
+
 #include "libft.h"
 
 /* 
@@ -60,7 +60,9 @@ static size_t  indexEnd(char const *s1, char const *set)
 {
     size_t  res;
     
-    res = ft_strlen(s1) - 1;
+    res = ft_strlen(s1);
+    if (!res) return (0);
+    else res--;
     while (res && setIncludesChar(set, s1[res]))
         res--;
     return (res);
@@ -79,17 +81,35 @@ char *ft_strtrim(char const *s1, char const *set)
         res_len = end_i - start_i;
     else
         res_len = 0;
-    return ft_substr(s1, start_i, end_i - start_i);
+    return ft_substr(s1, start_i, end_i - start_i + 1);
 }
 /* 
-void test(char const *s1, char const *set)
+void	ft_test(const char *input, char const *set, const char *reference)
 {
+	char	*trimmed_str;
 
+	trimmed_str = ft_strtrim(input, set);
+	if (!trimmed_str)
+	{
+		printf("Memory allocation error.\n");
+		exit(42);
+	}
+    printf("trimming '%s' from '%s': '%s' -> '%s'\n",
+        set, input, reference, trimmed_str);
+	free(trimmed_str);
 }
+
 
 int main(void)
 {
-    
+    ft_test("- ", " -h", "");
+    ft_test("", "", "");
+	ft_test("- -yulds.", " -.", "yulds");
+	ft_test("....- best   -", " -.", "best");
+	ft_test("O -. K", " -.", "O -. K");
+	ft_test("continue", " -.", "continue");
+	ft_test("break ;", " -.", "break ;");
+	ft_test(" One Night in Tokyo.", " -.", "One Night in Tokyo");
     return (0);
 }
  */
