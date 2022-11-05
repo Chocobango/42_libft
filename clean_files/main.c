@@ -1,42 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 16:53:22 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:01:58 by vvagapov         ###   ########.fr       */
+/*   Created: 2022/11/05 15:15:51 by vvagapov          #+#    #+#             */
+/*   Updated: 2022/11/05 15:18:07 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
+#include <stdio.h>
 
-void ft_bzero(void *s, size_t n)
-{
-	size_t i;
-	unsigned char *str;
-
-	i = 0;
-	str = s;
-	while (i < n && str[i])
-	{
-		str[i] = '\0';
-		i++;
-	}
-}
-
-/* 
 int main(void)
 {
-	char *s = malloc(sizeof(char) * 10);
-	s[9] = '\0';
-	for (int i = 0; i < 9; i++)
-		s[i] = i + 'a';
-	ft_bzero(s, 1);
-	printf("%s\n", s);
-	for (int i = 0; i < 10; i++)
-		printf("%c\n", s[i]);
-	return (0);
+    printf("%d\n", ft_atoi("-123dfsg"));
+    return (0);
 }
- */

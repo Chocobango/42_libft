@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvagapov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:33:04 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/10/24 15:48:40 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:20:21 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
-
 
 int ft_isalpha(int c)
 {
@@ -24,7 +23,7 @@ int ft_isalpha(int c)
 	else
 		return(0);
 }
-
+/* 
 int main(void)
 {
 	unsigned char c;
@@ -61,3 +60,4 @@ int main(void)
 	c = 1150;	
 	printf("%u %i\n", c,  ft_isalpha(c));
 }	
+ */

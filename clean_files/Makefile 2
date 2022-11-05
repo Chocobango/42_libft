@@ -6,27 +6,24 @@
 #    By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 20:11:58 by vvagapov          #+#    #+#              #
-#    Updated: 2022/11/05 17:08:01 by vvagapov         ###   ########.fr        #
+#    Updated: 2022/11/05 15:29:56 by vvagapov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 SRC = 	ft_atoi.c \
-		ft_bzero.c
 
 FLAGS = -Wall -Wextra -Werror
 
-OBJ = ${SRC:%.c=%.o}
+OBJ = 	ft_atoi.o \
 
 all: ${NAME}
 
-${NAME}: ${OBJ}
-	ar rc -s $@ $^
+${NAME}:
+	cc -c ${FLAGS} ${SRC}
+	ar rc -s ${NAME} ${OBJ}
 
-%.o:%.c
-	cc ${FLAGS} -c -o $@ $^
-	
 clean:
 	rm -f ${OBJ}
 
