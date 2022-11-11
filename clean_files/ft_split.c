@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:36:02 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/11 17:15:00 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/11 17:45:15 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,8 @@ char **ft_split(char const *s, char c)
     int     word_len;
 
     word_count = count_words(s, c);
-    res = (char **)malloc(sizeof(char *) * word_count + 1);
+    res = (char **)malloc(sizeof(char *) * (word_count + 1));
+    printf("allocated space for %d string pointers\n", word_count + 1);
     if (!res) return NULL;
     i = 0;
     while (i < word_count)
@@ -83,8 +84,8 @@ char **ft_split(char const *s, char c)
             s++;
         printf("skipped spaces: '%s'\n", s);
         word_len = get_word_len(s, c);
-        printf("%dth word length is %d\n", i + 1, word_len);
-        res[i] = (char *)malloc(sizeof(char) * word_len + 1);
+        printf("%dth word length is %d\n", i, word_len);
+        res[i] = (char *)malloc(sizeof(char) * (word_len + 1));
         if (!res[i])
             return (handle_malloc_fail(res, i));
         copy_word(res, s, i, word_len);

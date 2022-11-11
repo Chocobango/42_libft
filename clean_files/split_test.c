@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:21:36 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/11 17:17:08 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/11 17:42:19 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ void split_test(void)
 {
     //test("oihargh3q587ty0q3igiydoj", '3');
     //test("", 'h');
-    test("    would you like    some coffee ??   ", ' ');
+    test(" 12345 678 ", ' ');
     //test("111111", '1');
 }
