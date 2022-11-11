@@ -6,13 +6,15 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 15:15:51 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/11 15:01:31 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:40:20 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 #include <stdio.h>
+
+void split_test(void);
 /* 
 static int	ft_test(const void *arr1, const void *arr2, size_t n)
 {
@@ -38,8 +40,5 @@ int	main(void)
 		return (1);
 	}
 	printf("OK: ft_memcmp\n"); */
-	ft_split("   what    about it?    ", ' ');
-	ft_split("", ' ');
-	ft_split("       ", ' ');
-	ft_split("hey", ' ');
+	split_test();
 }

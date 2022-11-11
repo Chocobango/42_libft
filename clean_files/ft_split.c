@@ -6,17 +6,18 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:36:02 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/11 15:50:10 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/11 17:15:00 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <stdio.h>
 
-unsigned int count_words(char const *s, char c)
+static int  count_words(char const *s, char c)
 {
-    unsigned int res;
-    unsigned int i;
-    char word_found;
+    int     res;
+    int     i;
+    char    word_found;
 
     i = 0;
     res = 0;
@@ -35,34 +36,62 @@ unsigned int count_words(char const *s, char c)
     return (res);
 }
 
-unsigned int get_word_len(char *s, char c)
+static int  get_word_len(const char *s, char c)
 {
     int res;
 
     res = 0;
     while (s[res] && s[res] != c)
         res++;
-    return res;
+    return (res);
+}
+
+static void *handle_malloc_fail(char **res, int i)
+{
+    while (--i >= 0)
+        free(res[i]);
+    free(res);
+    return (NULL);
+}
+
+static void copy_word(char  **res, const char *str, int i, int word_len)
+{
+    res[i][word_len] = '\0';
+    while (--word_len >= 0)
+    {
+        printf("copying %dth character of the word which is %c\n",
+            word_len, str[word_len]);
+        res[i][word_len] = str[word_len];
+    }
+            
 }
 
 char **ft_split(char const *s, char c)
 {
-    char    *str;
     char    **res;
-    unsigned int    word_count;
-    unsigned int    i;
-    unsigned int    word_len;
+    int     word_count;
+    int     i;
+    int     word_len;
 
     word_count = count_words(s, c);
     res = (char **)malloc(sizeof(char *) * word_count + 1);
-    str = s;
+    if (!res) return NULL;
     i = 0;
     while (i < word_count)
     {
-        while (*str && *str == c) // Skip "spaces"
-            str++;
-        word_len = get_word_len(str, c);
-        res[i] = (char *)malloc(sizeof(char) * word_len);
-        word_count--;
+        while (*s && *s == c)
+            s++;
+        printf("skipped spaces: '%s'\n", s);
+        word_len = get_word_len(s, c);
+        printf("%dth word length is %d\n", i + 1, word_len);
+        res[i] = (char *)malloc(sizeof(char) * word_len + 1);
+        if (!res[i])
+            return (handle_malloc_fail(res, i));
+        copy_word(res, s, i, word_len);
+        s += word_len;
+        printf("string after reading the word: '%s'\n", s);
+        i++;
     }
+    res[word_count] = NULL;
+    return (res);
 }
