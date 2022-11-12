@@ -5,7 +5,7 @@
 ###################################
 
 #Edit the next line with the path of your libft project.
-PATH_LIBFT="../../github/clean_files"
+PATH_LIBFT="../../clean_files"
 
 #If you use a relative path, don't put double quotes.
 #For example :
