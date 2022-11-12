@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 22:18:20 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:36:49 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:38:51 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,46 +28,50 @@ Description:
             maximum size ’len’.
 */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
-static size_t min(size_t a, size_t b)
+static size_t	min(size_t a, size_t b)
 {
-    if (a < b) return (a);
-    else return (b);
+	if (a < b)
+		return (a);
+	else
+		return (b);
 }
 
 // What shall we do if s is NULL?
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t  s_len;
-    size_t  res_len;
-    char    *res;
-    
-    s_len = ft_strlen(s);
-    if (s_len < start)
-        res_len = 0;
-    else
-        res_len = min(len, s_len - start);
-    if (res_len < 0) res_len = 0;
-    res = malloc(sizeof(char) * res_len + 1);
-    if (!res) return NULL;
-    res[res_len] = '\0';
-    while (res_len)
-    {
-        res_len--;
-        res[res_len] = s[start + res_len];
-    }
-    return res;
+	size_t	s_len;
+	size_t	res_len;
+	char	*res;
+
+	s_len = ft_strlen(s);
+	if (s_len < start)
+		res_len = 0;
+	else
+		res_len = min(len, s_len - start);
+	if (res_len < 0)
+		res_len = 0;
+	res = malloc(sizeof(char) * res_len + 1);
+	if (!res)
+		return (NULL);
+	res[res_len] = '\0';
+	while (res_len)
+	{
+		res_len--;
+		res[res_len] = s[start + res_len];
+	}
+	return (res);
 }
 /* 
-void test(char const *s, unsigned int start, size_t len)
+void	test(char const *s, unsigned int start, size_t len)
 {
     printf("\t'%s' from %u for %lu: '%s'\n",
         s, start, len, ft_substr(s, start, len));
 }
 
-int main(void)
+int	main(void)
 {
     test("hello", 3, 10);
     test("hello", 3, 0);

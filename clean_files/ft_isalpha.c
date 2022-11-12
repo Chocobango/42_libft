@@ -6,22 +6,22 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:33:04 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:21:43 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:37:40 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-	unsigned char uc;
+	unsigned char	uc;
 
 	uc = (unsigned char)c;
 	if ((uc >= 'a' && uc <= 'z') || (uc >= 'A' && uc <= 'Z'))
-		return(1);
+		return (1);
 	else
-		return(0);
+		return (0);
 }
 /* 
-int main(void)
+int	main(void)
 {
 	unsigned char c;
 	c = 'b';

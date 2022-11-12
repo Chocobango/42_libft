@@ -6,37 +6,39 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:48:12 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:34:52 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:38:44 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    size_t  i;
-    size_t  j;
+	size_t	i;
+	size_t	j;
 
-    i = 0;
-    while (haystack[i] && i < len)
-    {
-        j = 0;
-        while (i + j < len && needle[j] && haystack[i + j] && needle[j] == haystack[i + j])
-            j++;
-        if (!needle[j])
-            return ((char*)(haystack + i));
-        i++;
-    }
-    return (NULL);
+	i = 0;
+	while (haystack[i] && i < len)
+	{
+		j = 0;
+		while (i + j < len && needle[j] && haystack[i + j]
+			&& needle[j] == haystack[i + j])
+			j++;
+		if (!needle[j])
+			return ((char *)(haystack + i));
+		i++;
+	}
+	return (NULL);
 }
 /* 
-void    test(const char *haystack, const char *needle, size_t len)
+void	test(const char *haystack, const char *needle, size_t len)
 {
     printf("Searching for '%s' in %lu chars of '%s' -> '%s': %s\n",
-    needle, len, haystack, strnstr(haystack, needle, len), ft_strnstr(haystack, needle, len));
+    needle, len, haystack, strnstr(haystack, needle, len), ft_strnstr(haystack,
+		needle, len));
 }
 
-int main(void)
+int	main(void)
 {
     test("123456789059826905", "905", 30);
     test("123456789059826905", "", 30);

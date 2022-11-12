@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 20:52:45 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:52 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:38:09 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 /* 
-int main(void)
+int	main(void)
 {
-	char str[] = "what do you know about it she asked, clueless";
+	char	str[];
+
+	str[] = "what do you know about it she asked, clueless";
 	puts(str);
 	puts(str + 20);
 	puts(str + 15);
 	ft_memmove(str + 15, str + 20, 10);
 	puts(str);
-	return 0;
+	return (0);
 }
  */

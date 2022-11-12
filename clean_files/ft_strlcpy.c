@@ -6,16 +6,15 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:34:31 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:33:44 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:38:37 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] && (i + 1 < dstsize))
@@ -34,14 +33,14 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 }
 
 /* 
-void test(int size)
+void	test(int size)
 {
-    char string[] = "Hello there, V";
+	char	string[];
     char buffer[19];
     int r;
 
+    string[] = "Hello there, V";
     r = ft_strlcpy(buffer,string,size);
-
     printf("Copied '%s' into '%s', length %d\n",
             string,
             buffer,
@@ -49,13 +48,12 @@ void test(int size)
           );
 }
 
-int main(void)
+int	main(void)
 {
     test(19);
     test(10);
     test(1);
     test(0);
-
     return(0);
 }
  */

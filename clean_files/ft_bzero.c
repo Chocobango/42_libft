@@ -6,16 +6,16 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:53:22 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:01:58 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:37:29 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
-	unsigned char *str;
+	size_t			i;
+	unsigned char	*str;
 
 	i = 0;
 	str = s;
@@ -27,9 +27,11 @@ void ft_bzero(void *s, size_t n)
 }
 
 /* 
-int main(void)
+int	main(void)
 {
-	char *s = malloc(sizeof(char) * 10);
+	char	*s;
+
+	s = malloc(sizeof(char) * 10);
 	s[9] = '\0';
 	for (int i = 0; i < 9; i++)
 		s[i] = i + 'a';

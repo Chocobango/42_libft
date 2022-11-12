@@ -6,17 +6,17 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:16:59 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:31 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:38:06 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
-	char *d;
-	const char *s;
+	size_t		i;
+	char		*d;
+	const char	*s;
 
 	i = 0;
 	d = dst;
@@ -26,16 +26,19 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 		d[i] = s[i];
 		i++;
 	}
-	return dst;
+	return (dst);
 }
 /* 
-int main(void)
+int	main(void)
 {
-	char *s = malloc(sizeof(char) * 10);
+	char	*s;
+	char	*s1;
+
+	s = malloc(sizeof(char) * 10);
 	s[9] = '\0';
 	for (int i = 0; i < 9; i++)
 		s[i] = i + 'a';
-	char *s1 = malloc(sizeof(char) * 3);
+	s1 = malloc(sizeof(char) * 3);
 	s1[2] = '\0';
 	for (int i = 0; i < 2; i++)
 		s1[i] = i + '0';

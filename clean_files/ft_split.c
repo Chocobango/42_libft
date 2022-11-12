@@ -6,12 +6,12 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:36:02 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/11 19:57:55 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:38:18 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 static int	count_words(char const *s, char c)
 {
@@ -38,7 +38,7 @@ static int	get_word_len(const char *s, char c)
 
 	res = 0;
 	while (s[res] && s[res] != c)
-	res++;
+		res++;
 	return (res);
 }
 

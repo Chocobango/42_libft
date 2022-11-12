@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:26:03 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/11 14:28:12 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:40:37 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,64 +25,65 @@ Description:
             from the beginning and the end of the string.
 */
 
-
 #include "libft.h"
 
 /* 
-static size_t min(size_t a, size_t b)
+static size_t	min(size_t a, size_t b)
 {
     if (a < b) return (a);
     else return (b);
 }
  */
 
-static char    setIncludesChar(char const *str, char c)
-{    
-    while(*str)
-    {
-        if (*str == c)
-            return (1);
-        str++;
-    }
-    return (0);
+static char	set_includes_char(char const *str, char c)
+{
+	while (*str)
+	{
+		if (*str == c)
+			return (1);
+		str++;
+	}
+	return (0);
 }
 
-static size_t  indexStart(char const *s1, char const *set)
+static size_t	index_start(char const *s1, char const *set)
 {
-    size_t  res;
-    
-    res = 0;
-    while (s1[res] && setIncludesChar(set, s1[res]))
-        res++;
-    return (res);
+	size_t	res;
+
+	res = 0;
+	while (s1[res] && set_includes_char(set, s1[res]))
+		res++;
+	return (res);
 }
 
-static size_t  indexEnd(char const *s1, char const *set)
+static size_t	index_end(char const *s1, char const *set)
 {
-    size_t  res;
-    
-    res = ft_strlen(s1);
-    if (!res) return (0);
-    else res--;
-    while (res && setIncludesChar(set, s1[res]))
-        res--;
-    return (res);
+	size_t	res;
+
+	res = ft_strlen(s1);
+	if (!res)
+		return (0);
+	else
+		res--;
+	while (res && set_includes_char(set, s1[res]))
+		res--;
+	return (res);
 }
 
 // What shall we do if s1 is NULL?
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    size_t  start_i;
-    size_t  end_i;
-    size_t  res_len;
-    
-    start_i = indexStart(s1, set);
-    end_i = indexEnd(s1, set);
-    if (start_i >= end_i)
-        res_len = end_i - start_i;
-    else
-        res_len = 0;
-    return ft_substr(s1, start_i, end_i - start_i + 1);
+	size_t	start_i;
+	size_t	end_i;
+	size_t	res_len;
+
+	start_i = index_start(s1, set);
+	end_i = index_end(s1, set);
+	if (start_i >= end_i)
+		res_len = end_i - start_i;
+	else
+		res_len = 0;
+	return (ft_substr(s1, start_i, end_i - start_i + 1));
 }
 /* 
 void	ft_test(const char *input, char const *set, const char *reference)
@@ -101,7 +102,7 @@ void	ft_test(const char *input, char const *set, const char *reference)
 }
 
 
-int main(void)
+int	main(void)
 {
     ft_test("- ", " -h", "");
     ft_test("", "", "");

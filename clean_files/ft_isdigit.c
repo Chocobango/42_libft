@@ -6,24 +6,25 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:13:11 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:22:37 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:37:47 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	unsigned char uc;
+	unsigned char	uc;
 
 	uc = (unsigned char)c;
 	if (uc >= '0' && uc <= '9')
-		return(1);
+		return (1);
 	else
-		return(0);
+		return (0);
 }
 /* 
-int main(void)
+int	main(void)
 {
-	unsigned char c;
+	unsigned char	c;
+
 	c = '\0';
 	printf("%u or %c -> orig: %i, mine: %i\n", c, c, isdigit(c), ft_isdigit(c));
 	c = -15;

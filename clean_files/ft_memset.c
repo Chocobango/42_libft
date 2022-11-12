@@ -6,15 +6,15 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:31:50 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:25:17 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:38:12 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *str;
+	unsigned char	*str;
 
 	str = b;
 	while (*str && len)
@@ -23,12 +23,14 @@ void *ft_memset(void *b, int c, size_t len)
 		str++;
 		len--;
 	}
-	return b;
+	return (b);
 }
 /* 
-int main(void)
+int	main(void)
 {
-	char *s = malloc(sizeof(char) * 10);
+	char	*s;
+
+	s = malloc(sizeof(char) * 10);
 	s[9] = '\0';
 	for (int i = 0; i < 9; i++)
 		s[i] = i + 'a';

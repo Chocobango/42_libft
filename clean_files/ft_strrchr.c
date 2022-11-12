@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:39:02 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:35:32 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:38:47 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 // Go till the end of the string, remember last match if it exists.
 // If search was looking for '\0', return address of the end of the string.
 // Otherwise return res (NULL or address of the last match)
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char needle;
-	char *res;
-	char *temp;
+	char	needle;
+	char	*res;
+	char	*temp;
 
 	needle = (char)c;
 	temp = (char *)s;
@@ -31,27 +31,28 @@ char *ft_strrchr(const char *s, int c)
 		temp++;
 	}
 	if (!needle)
-		return temp;
+		return (temp);
 	else
-		return res;
+		return (res);
 }
 /* 
-void test(const char *s, int c)
+void	test(const char *s, int c)
 {
 	printf("Searching for '%c' in '%s': '%s' -> '%s'\n",
 			c, s, strrchr(s, c), ft_strrchr(s, c));
 }
 
-int main(void)
+int	main(void)
 {
+	char	s[3];
+
 	test("Hello there", 'e');
 	test("Hello there", '\0');
 	test("Hello there", 0);
 	test("a", 'b');
 	test("", 'h');
-	char s[3];
 	s[0] = '\0';
 	test(s, 0);
-	return 0;
+	return (0);
 }
  */

@@ -6,17 +6,17 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:31:24 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:20 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:38:02 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
-	unsigned char *uc1;
-	unsigned char *uc2;
+	size_t			i;
+	unsigned char	*uc1;
+	unsigned char	*uc2;
 
 	i = 0;
 	uc1 = (unsigned char *)s1;
@@ -30,13 +30,13 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 /* 
-void test(const void *s1, const void *s2, size_t n)
+void	test(const void *s1, const void *s2, size_t n)
 {
 	printf("'%s' vs '%s', %lu bytes: %d -> %d\n",
 			s1, s2, n, memcmp(s1, s2, n), ft_memcmp(s1, s2, n));
 }
 
-int  main(void)
+int	main(void)
 {
 	test("000004", "00000", 5);
    	test("000004", "00000", 6);
