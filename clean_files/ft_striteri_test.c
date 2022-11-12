@@ -1,44 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 16:53:22 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 22:19:54 by vvagapov         ###   ########.fr       */
+/*   Created: 2022/11/12 22:06:45 by vvagapov          #+#    #+#             */
+/*   Updated: 2022/11/12 23:15:07 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void f(unsigned int i, char *c)
 {
-	size_t			i;
-	unsigned char	*str;
-
-	i = 0;
-	str = s;
-	while (i < n && str[i])
-	{
-		str[i] = '\0';
-		i++;
-	}
+	*c = i % 10 + *c;
 }
 
-/* 
-int	main(void)
+void test(char *s, void (*f)(unsigned int, char*))
+{
+	printf("'%s' -> ", s);
+	ft_striteri(s, f);
+	printf("'%s'\n", s);
+}
+
+int main(void)
 {
 	char	*s;
+	unsigned int	len;
+	unsigned int	i;
 
-	s = malloc(sizeof(char) * 10);
-	s[9] = '\0';
-	for (int i = 0; i < 9; i++)
-		s[i] = i + 'a';
-	ft_bzero(s, 1);
-	printf("%s\n", s);
-	for (int i = 0; i < 10; i++)
-		printf("%c\n", s[i]);
+	len = 11;
+	s = (char *)malloc(sizeof(char) * len + 1);
+	s[len] = '\0';
+	i = 0;
+	while (i < len)
+	{
+		s[i] = '0';
+		i++;
+	}
+	test(s, f);
+	free(s);
 	return (0);
 }
- */

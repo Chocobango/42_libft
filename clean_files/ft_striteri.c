@@ -1,44 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 16:53:22 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 22:19:54 by vvagapov         ###   ########.fr       */
+/*   Created: 2022/11/12 22:31:04 by vvagapov          #+#    #+#             */
+/*   Updated: 2022/11/12 23:15:21 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t			i;
-	unsigned char	*str;
+	unsigned int i;
 
 	i = 0;
-	str = s;
-	while (i < n && str[i])
+	while (s[i])
 	{
-		str[i] = '\0';
+		f(i, s + i);
 		i++;
 	}
 }
-
-/* 
-int	main(void)
-{
-	char	*s;
-
-	s = malloc(sizeof(char) * 10);
-	s[9] = '\0';
-	for (int i = 0; i < 9; i++)
-		s[i] = i + 'a';
-	ft_bzero(s, 1);
-	printf("%s\n", s);
-	for (int i = 0; i < 10; i++)
-		printf("%c\n", s[i]);
-	return (0);
-}
- */

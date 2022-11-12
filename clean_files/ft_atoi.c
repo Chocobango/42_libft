@@ -6,11 +6,9 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 20:10:08 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 20:53:56 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 22:19:28 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 static char	is_whitespace(char c)
 {

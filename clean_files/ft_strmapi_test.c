@@ -1,44 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strmapi_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 16:53:22 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 22:19:54 by vvagapov         ###   ########.fr       */
+/*   Created: 2022/11/12 22:06:45 by vvagapov          #+#    #+#             */
+/*   Updated: 2022/11/12 22:28:06 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char f(unsigned int i, char c)
 {
-	size_t			i;
-	unsigned char	*str;
-
-	i = 0;
-	str = s;
-	while (i < n && str[i])
-	{
-		str[i] = '\0';
-		i++;
-	}
+	return (c + i % 10);
 }
 
-/* 
-int	main(void)
+void test(char const *s, char (*f)(unsigned int, char))
 {
-	char	*s;
+	printf("'%s' -> '%s'\n", s, ft_strmapi(s, f));
+}
 
-	s = malloc(sizeof(char) * 10);
-	s[9] = '\0';
-	for (int i = 0; i < 9; i++)
-		s[i] = i + 'a';
-	ft_bzero(s, 1);
-	printf("%s\n", s);
-	for (int i = 0; i < 10; i++)
-		printf("%c\n", s[i]);
+int main(void)
+{
+	test("1111111", f);
+	test("", f);
+	test("0", f);
 	return (0);
 }
- */
