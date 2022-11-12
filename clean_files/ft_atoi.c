@@ -6,20 +6,11 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 20:10:08 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 19:10:46 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:06:31 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdlib.h>
-#include "libft.h"
-#include <limits.h>
-#include <stdio.h>*/
-/* 
-long	ft_strtol(const char *str)
-{
-}
- */
-// TODO: use strtol !
+#include <stdio.h>
 
 static char	is_whitespace(char c)
 {
@@ -30,58 +21,27 @@ static char	is_whitespace(char c)
 int	ft_atoi(const char *str)
 {
 	char		sign;
-	char		*s;
 	long long	res;
 	long long	res_prev;
 
 	sign = 1;
-	s = (char *)str;
 	res = 0;
-	while (is_whitespace(*s))
-		s++;
-	if (*(s++) == '-')
-		sign = -1;
-	else if (*s == '+')
-		s++;
-	while (*s >= '0' && *s <= '9')
+	while (is_whitespace(*str))
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign = -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
 	{
 		res_prev = res;
-		res = res * 10 + (*(s++) - '0');
-		if ((res_prev ^ res) < 0)
-			if (sign > 0)
-				return (-1);
-		else
+		res = res * 10 + (*(str++) - '0');
+		if ((res_prev ^ res) < 0 && sign > 0)
+			return (-1);
+		else if ((res_prev ^ res) < 0)
 			return (0);
 	}
 	return ((int)res * sign);
 }
-
-/* 
-void	test(const char *str)
-{
-	printf("%s -> %d : %d\n", str, atoi(str), ft_atoi(str));
-}
-
-int	main(void)
-{
-	test("86 3");
-	test("-3575h3");
-	test(" -3");
-	test(" +3");
-	test("+-3");
-	test("  -3");
-	test("  - 3");
-	test("           3");
-	test("0003");
-	test("+2147483647");
-	test("+2147483648");
-	test("-2147483648");
-	test("-2147483649");
-	test("0000");
-	test("0.5");
-	test("-0");
-	test("++5");
-	test("-3-5f575h");
-	test("");
-	return (0);
-} */
