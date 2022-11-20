@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 20:18:57 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/20 21:58:18 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/20 22:20:30 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,32 @@ void ft_putstr(void *s)
 	ft_putstr_fd(" -> ", 1);
 }
 
+
+
 int main(void)
 {
+	char	*s;
 	t_list	*node;
-	node = ft_lstnew("node1");
+	
 
 	t_list	*l;
 	l = NULL;
+	s = malloc(3);
+	s[0] = 'a';
+	s[1] = 'b';
+	s[2] = '\0';
+	node = ft_lstnew(s);
 	ft_putstr_fd("LAST NODE: ", 1);
 	ft_lstiter(ft_lstlast(l), ft_putstr);
 	ft_putchar_fd('\n', 1);
 	printf("list size: %d\n", ft_lstsize(l));
 	ft_lstadd_front(&l, node);
-	ft_putstr_fd("LAST NODE: ", 1);
+	ft_lstiter(l, ft_putstr);
+	ft_putchar_fd('\n', 1);
+	
+	ft_putstr_fd("CLEAR: ", 1);
+	ft_lstclear(&l, free);
+	
 	ft_lstiter(ft_lstlast(l), ft_putstr);
 	ft_putchar_fd('\n', 1);
 	ft_lstadd_front(&l, ft_lstnew("node2"));
