@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 20:18:57 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/20 22:20:30 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/20 22:54:02 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ void ft_putstr(void *s)
 	ft_putstr_fd(" -> ", 1);
 }
 
-
+void	*map_str(void	*s)
+{
+	return(ft_itoa(ft_strlen((char*)s)));
+}
 
 int main(void)
 {
@@ -41,6 +44,7 @@ int main(void)
 	ft_lstadd_front(&l, node);
 	ft_lstiter(l, ft_putstr);
 	ft_putchar_fd('\n', 1);
+	printf("list size: %d\n", ft_lstsize(l));
 	
 	ft_putstr_fd("CLEAR: ", 1);
 	ft_lstclear(&l, free);
@@ -58,6 +62,12 @@ int main(void)
 	ft_putstr_fd("ADD TO BACK: ", 1);
 	ft_lstadd_back(&l, ft_lstnew("node4"));
 	ft_lstiter(l, ft_putstr);
+	ft_putchar_fd('\n', 1);
+	
+	ft_putstr_fd("MAP: ", 1);
+	t_list	*l2;
+	l2 = ft_lstmap(l, map_str, free);
+	ft_lstiter(l2, ft_putstr);
 	ft_putchar_fd('\n', 1);
 	return (0);
 }
