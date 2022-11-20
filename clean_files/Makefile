@@ -6,7 +6,7 @@
 #    By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 20:11:58 by vvagapov          #+#    #+#              #
-#    Updated: 2022/11/20 19:42:23 by vvagapov         ###   ########.fr        #
+#    Updated: 2022/11/20 20:29:43 by vvagapov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,8 @@ SRC = 	ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
 
+BONUS_SRC = ft_lstnew.c \
+
 FLAGS = -Wall -Wextra -Werror
 
 OBJ = ${SRC:%.c=%.o}
@@ -55,6 +57,12 @@ all: ${NAME}
 
 ${NAME}: ${OBJ}
 	ar rc -s $@ $^
+
+bonus: ${BONUS_SRC:.c=.o}
+
+${BONUS_SRC:.c=.o} : fclean
+	cc ${FLAGS} -c ${BONUS_SRC} ${SRC}
+	ar rc -s ${NAME} ${BONUS_SRC:.c=.o} ${SRC:.c=.o}
 
 %.o:%.c
 	cc ${FLAGS} -c -o $@ $^

@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd_test.c                                :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 19:39:26 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/20 19:53:00 by vvagapov         ###   ########.fr       */
+/*   Created: 2022/11/20 20:15:23 by vvagapov          #+#    #+#             */
+/*   Updated: 2022/11/20 20:18:46 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <limits.h>
 
-void test(int n, int fd)
+t_list *ft_lstnew(void *content)
 {
-	ft_putnbr_fd(n, fd);
-}
+	t_list	*res;
 
-int main(void)
-{
-	test(-3463583, 1);
-	ft_putchar_fd('\n', 1);
-	test(0, 1);
-	ft_putchar_fd('\n', 1);
-	test(INT_MAX, 1);
-	ft_putchar_fd('\n', 1);
-	test(INT_MIN, 1);
+	res = (t_list *)malloc(sizeof(t_list));
+	if (res)
+	{
+		res->content = content;
+		res->next = NULL;
+	}
+	return (res);
 }

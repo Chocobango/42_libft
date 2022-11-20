@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd_test.c                                :+:      :+:    :+:   */
+/*   ft_lstnew_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 19:39:26 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/20 19:53:00 by vvagapov         ###   ########.fr       */
+/*   Created: 2022/11/20 20:18:57 by vvagapov          #+#    #+#             */
+/*   Updated: 2022/11/20 20:27:10 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <limits.h>
-
-void test(int n, int fd)
-{
-	ft_putnbr_fd(n, fd);
-}
 
 int main(void)
 {
-	test(-3463583, 1);
-	ft_putchar_fd('\n', 1);
-	test(0, 1);
-	ft_putchar_fd('\n', 1);
-	test(INT_MAX, 1);
-	ft_putchar_fd('\n', 1);
-	test(INT_MIN, 1);
+	t_list	*node;
+
+	node = ft_lstnew("herro");
+	printf("%s -> %p\n", node->content, node->next);
+	free(node);
+	return (0);
 }
