@@ -6,7 +6,7 @@
 #    By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 20:11:58 by vvagapov          #+#    #+#              #
-#    Updated: 2022/11/20 21:31:21 by vvagapov         ###   ########.fr        #
+#    Updated: 2022/11/20 21:57:40 by vvagapov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,8 @@ SRC = 	ft_isalpha.c \
 BONUS_SRC = ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
 			ft_lstiter.c
 
 FLAGS = -Wall -Wextra -Werror
