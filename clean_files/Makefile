@@ -6,7 +6,7 @@
 #    By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 20:11:58 by vvagapov          #+#    #+#              #
-#    Updated: 2022/11/12 22:33:03 by vvagapov         ###   ########.fr        #
+#    Updated: 2022/11/20 19:33:17 by vvagapov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,11 @@ SRC = 	ft_isalpha.c \
 		ft_split.c \
 		ft_itoa.c \
 		ft_strmapi.c \
-		ft_striteri.c
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd
 
 FLAGS = -Wall -Wextra -Werror
 
