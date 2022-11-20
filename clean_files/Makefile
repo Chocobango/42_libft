@@ -6,7 +6,7 @@
 #    By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 20:11:58 by vvagapov          #+#    #+#              #
-#    Updated: 2022/11/20 20:29:43 by vvagapov         ###   ########.fr        #
+#    Updated: 2022/11/20 20:54:10 by vvagapov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,26 +53,25 @@ FLAGS = -Wall -Wextra -Werror
 
 OBJ = ${SRC:%.c=%.o}
 
+BONUS_OBJ = ${BONUS_SRC:%.c=%.o}
+
 all: ${NAME}
 
 ${NAME}: ${OBJ}
 	ar rc -s $@ $^
 
-bonus: ${BONUS_SRC:.c=.o}
+bonus: ${BONUS_OBJ} ${OBJ}
+	ar rc -s ${NAME} ${BONUS_OBJ} ${OBJ}
 
-${BONUS_SRC:.c=.o} : fclean
-	cc ${FLAGS} -c ${BONUS_SRC} ${SRC}
-	ar rc -s ${NAME} ${BONUS_SRC:.c=.o} ${SRC:.c=.o}
-
-%.o:%.c
+%.o: %.c
 	cc ${FLAGS} -c -o $@ $^
 	
 clean:
-	rm -f ${OBJ}
+	rm -f ${OBJ} ${BONUS_OBJ}
 
 fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
