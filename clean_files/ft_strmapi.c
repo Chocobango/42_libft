@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 21:59:43 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 23:20:08 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/20 23:09:38 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t str_len;
-	char *res;
+	size_t	str_len;
+	char	*res;
 
 	str_len = ft_strlen(s);
 	res = (char *)malloc(sizeof(char) * (str_len + 1));

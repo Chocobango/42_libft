@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:34:31 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 17:38:37 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/20 23:09:47 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	if (dstsize > 0)
 		dst[i] = '\0';
-	// If the source string is longer than dstsize
 	while (src[i])
 	{
 		i++;
