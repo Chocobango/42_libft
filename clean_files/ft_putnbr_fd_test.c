@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd_test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 19:31:08 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/20 19:43:48 by vvagapov         ###   ########.fr       */
+/*   Created: 2022/11/20 19:39:26 by vvagapov          #+#    #+#             */
+/*   Updated: 2022/11/20 19:43:38 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <limits.h>
 
-void	ft_putnbr_fd(int n, int fd)
+void test(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	ft_putnbr_fd(n, fd);
+}
+
+int main(void)
+{
+	test(-3463583, 1);
+	ft_putchar_fd('\n', 1);
+	test(0, 1);
+	ft_putchar_fd('\n', 1);
+	test(INT_MAX, 1);
+	ft_putchar_fd('\n', 1);
+	test(INT_MIN, 1);
 }
