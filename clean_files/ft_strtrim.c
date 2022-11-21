@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:26:03 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 17:40:37 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:55:39 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end_i;
 	size_t	res_len;
 
+	if (!s1 || !set)
+		return (NULL);
 	start_i = index_start(s1, set);
 	end_i = index_end(s1, set);
 	if (start_i >= end_i)

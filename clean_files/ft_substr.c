@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 22:18:20 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 17:38:51 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:56:24 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,15 @@ static size_t	min(size_t a, size_t b)
 		return (b);
 }
 
-// What shall we do if s is NULL?
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	s_len;
 	size_t	res_len;
 	char	*res;
 
-	s_len = ft_strlen(s);
+	if (!s)
+        return (NULL);
+    s_len = ft_strlen(s);
 	if (s_len < start)
 		res_len = 0;
 	else

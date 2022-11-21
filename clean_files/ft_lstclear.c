@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 22:08:48 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/20 22:50:56 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:40:21 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*prev;
 
-	if (!lst)
+	if (!lst || !del)
 		return ;
 	while (*lst)
 	{
