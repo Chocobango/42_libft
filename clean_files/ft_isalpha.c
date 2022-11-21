@@ -6,16 +6,13 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:33:04 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 17:37:40 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:35:16 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	unsigned char	uc;
-
-	uc = (unsigned char)c;
-	if ((uc >= 'a' && uc <= 'z') || (uc >= 'A' && uc <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);

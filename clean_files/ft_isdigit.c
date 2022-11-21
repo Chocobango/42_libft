@@ -6,16 +6,13 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:13:11 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 17:37:47 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:34:26 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	unsigned char	uc;
-
-	uc = (unsigned char)c;
-	if (uc >= '0' && uc <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);

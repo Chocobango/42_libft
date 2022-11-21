@@ -6,11 +6,16 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:16:59 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 17:38:06 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/21 20:19:51 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
+
+//[no crash]: your memcpy does not segv with NULL on first params
+//[no crash]: your memcpy does not segv with NULL on second params
+
+//[crash]: your memcpy does not behave well with NULL as both params with size
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -18,6 +23,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char		*d;
 	const char	*s;
 
+ 	if (!dst && !src)
+		return (NULL);
 	i = 0;
 	d = dst;
 	s = src;
@@ -28,25 +35,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-/* 
-int	main(void)
-{
-	char	*s;
-	char	*s1;
-
-	s = malloc(sizeof(char) * 10);
-	s[9] = '\0';
-	for (int i = 0; i < 9; i++)
-		s[i] = i + 'a';
-	s1 = malloc(sizeof(char) * 3);
-	s1[2] = '\0';
-	for (int i = 0; i < 2; i++)
-		s1[i] = i + '0';
-	printf("%s\n", s);
-	printf("%s\n", s1);
-	printf("%s\n", memcpy(s, s1, 2));
-	printf("%s\n", s);
-	printf("%s\n", memcpy(NULL, s, 1));
-	return (0);
-}
- */

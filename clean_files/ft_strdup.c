@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 21:41:33 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/21 16:58:33 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:27:07 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ char	*ft_strdup(const char *s1)
 	}
 	return (s2);
 }
+
 /* 
 void	test(const char *s)
 {
