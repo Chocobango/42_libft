@@ -6,12 +6,12 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 21:41:33 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/21 19:27:07 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/25 21:52:00 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <errno.h>
-#include <stdlib.h>
+#include "libft.h"
 
 // call strlen()
 char	*ft_strdup(const char *s1)
@@ -19,11 +19,7 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 	char	*s2;
 
-	if (!s1)
-		return (NULL);
-	len = 0;
-	while (s1[len])
-		len++;
+	len = ft_strlen(s1);
 	s2 = malloc(sizeof(char) * len + 1);
 	if (!s2)
 	{
