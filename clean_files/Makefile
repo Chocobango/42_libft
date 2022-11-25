@@ -6,7 +6,7 @@
 #    By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 20:11:58 by vvagapov          #+#    #+#              #
-#    Updated: 2022/11/20 22:54:30 by vvagapov         ###   ########.fr        #
+#    Updated: 2022/11/25 21:11:55 by vvagapov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,20 +66,24 @@ BONUS_OBJ = ${BONUS_SRC:%.c=%.o}
 all: ${NAME}
 
 ${NAME}: ${OBJ}
-	ar rc -s $@ $^
+	@ar -ruvcs $@ $^
 
-bonus: ${BONUS_OBJ} ${OBJ}
-	ar rc -s ${NAME} ${BONUS_OBJ} ${OBJ}
+bonus: .bonus_flag
+
+.bonus_flag: ${BONUS_OBJ}
+	@ar -ruvcs ${NAME} ${BONUS_OBJ}
+	-@touch .bonus_flag
 
 %.o: %.c
-	cc ${FLAGS} -c -o $@ $^
+	@cc ${FLAGS} -c -o $@ $^
 	
 clean:
-	rm -f ${OBJ} ${BONUS_OBJ}
+	@rm -f ${OBJ} ${BONUS_OBJ}
+	-@rm -f .bonus_flag
 
 fclean: clean
-	rm -f ${NAME}
+	@rm -f ${NAME}
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus %.o
+.PHONY: all clean fclean re bonus
