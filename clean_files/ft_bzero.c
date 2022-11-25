@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:53:22 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 22:19:54 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/25 22:22:53 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t			i;
-	unsigned char	*str;
+	char	*str;
 
 	i = 0;
 	str = s;
-	while (i < n && str[i])
+	while (i < n)
 	{
 		str[i] = '\0';
 		i++;
