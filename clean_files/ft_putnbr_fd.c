@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 19:31:08 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/21 17:13:59 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/25 21:56:44 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	char	*str;
+	
+	str = ft_itoa(n);
+	ft_putstr_fd(str, fd);
+	free(str);
 }
