@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 21:41:33 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:55:34 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 23:06:13 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ char	*ft_strdup(const char *s1)
 	len = ft_strlen(s1);
 	s2 = malloc(sizeof(char) * len + 1);
 	if (!s2)
-	{
-		errno = ENOMEM;
 		return (NULL);
-	}
 	s2[len] = '\0';
 	while (len)
 	{

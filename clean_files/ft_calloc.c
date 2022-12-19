@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 21:09:36 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:37:33 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 23:05:53 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	res = malloc(num_of_bytes);
 	if (!res)
-	{
-		errno = ENOMEM;
 		return (NULL);
-	}
 	ft_bzero(res, num_of_bytes);
 	return ((void *)res);
 }

@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 20:15:21 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 17:19:07 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 23:05:37 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <errno.h>
 # include <unistd.h>
 
 typedef struct s_list
