@@ -6,11 +6,11 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 15:01:43 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/20 23:21:04 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:37:11 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

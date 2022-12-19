@@ -6,11 +6,11 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 16:37:54 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/21 19:50:40 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:32:40 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

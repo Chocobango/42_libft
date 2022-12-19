@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:26:03 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/21 18:55:39 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:36:54 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,6 @@ Description:
 */
 
 #include "libft.h"
-
-/* 
-static size_t	min(size_t a, size_t b)
-{
-    if (a < b) return (a);
-    else return (b);
-}
- */
 
 static char	set_includes_char(char const *str, char c)
 {

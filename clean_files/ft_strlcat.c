@@ -6,11 +6,11 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:43:37 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 17:38:35 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:31:34 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 // First the function looks for terminating 0 in dst.
 // If 0 wasn't found within the buffer size, stop.

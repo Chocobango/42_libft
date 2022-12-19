@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 22:18:20 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/21 18:56:24 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:36:46 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ Description:
 */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static size_t	min(size_t a, size_t b)
 {

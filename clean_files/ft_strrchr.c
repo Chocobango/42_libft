@@ -6,11 +6,11 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:39:02 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 17:38:47 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:36:59 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 // Go till the end of the string, remember last match if it exists.
 // If search was looking for '\0', return address of the end of the string.

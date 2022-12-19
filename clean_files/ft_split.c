@@ -6,11 +6,10 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:36:02 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/12 23:44:02 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:32:06 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 static int	count_words(char const *s, char c)

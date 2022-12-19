@@ -6,14 +6,12 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 21:41:33 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/25 21:52:00 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:29:43 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <errno.h>
 #include "libft.h"
 
-// call strlen()
 char	*ft_strdup(const char *s1)
 {
 	size_t	len;
