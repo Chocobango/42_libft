@@ -6,15 +6,17 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 23:39:22 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/20 23:45:29 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 21:41:09 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 void	test(const char *haystack, const char *needle, size_t len)
 {
-    printf("Searching for '%s' in %lu chars of '%s' -> '%s': %s\n",
+    printf("Searching for '%s' in %lu chars of '%s' -> '%s': '%s'\n",
     needle, len, haystack, strnstr(haystack, needle, len), ft_strnstr(haystack,
 		needle, len));
 }
