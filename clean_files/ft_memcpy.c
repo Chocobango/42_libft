@@ -6,16 +6,11 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:16:59 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:36:43 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 22:52:04 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-//[no crash]: your memcpy does not segv with NULL on first params
-//[no crash]: your memcpy does not segv with NULL on second params
-
-//[crash]: your memcpy does not behave well with NULL as both params with size
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

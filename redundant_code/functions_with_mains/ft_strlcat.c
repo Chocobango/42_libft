@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:43:37 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:55:43 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:31:34 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,38 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (i + dst_len);
 }
+/* 
+void	test(int size)
+{
+	char	string[];
+    char buffer[30];
+    int r;
+
+    string[] = "Hello";
+	buffer[0] = 'a';
+	buffer[1] = 'b';
+	buffer[2] = 'c';
+	buffer[3] = '\0';
+	buffer[4] = 'd';
+    r = ft_strlcat(buffer, string, size);
+    printf("For size %d: added '%s' to '%s', length %d\n",
+			size,
+            string,
+            buffer,
+            r
+          );
+}
+
+int	main(void)
+{
+//    test(19);
+//    test(10);
+	test(5);
+	test(4);
+	test(3);
+	test(2);
+    test(1);
+    test(0);
+    return(0);
+}
+ */

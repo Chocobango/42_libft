@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:39:02 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:55:53 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:36:59 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,24 @@ char	*ft_strrchr(const char *s, int c)
 	else
 		return (res);
 }
+/* 
+void	test(const char *s, int c)
+{
+	printf("Searching for '%c' in '%s': '%s' -> '%s'\n",
+			c, s, strrchr(s, c), ft_strrchr(s, c));
+}
+
+int	main(void)
+{
+	char	s[3];
+
+	test("Hello there", 'e');
+	test("Hello there", '\0');
+	test("Hello there", 0);
+	test("a", 'b');
+	test("", 'h');
+	s[0] = '\0';
+	test(s, 0);
+	return (0);
+}
+ */

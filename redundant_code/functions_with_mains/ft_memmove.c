@@ -6,14 +6,13 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 20:52:45 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:58:42 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 22:40:04 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Last while loop should really be wrapped in "else" for readability,
-// but line limit got me...
+// Should I throw an error about overflow like in the original?
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -42,3 +41,17 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+/* 
+int	main(void)
+{
+	char	str[];
+
+	str[] = "what do you know about it she asked, clueless";
+	puts(str);
+	puts(str + 20);
+	puts(str + 15);
+	ft_memmove(str + 15, str + 20, 10);
+	puts(str);
+	return (0);
+}
+ */

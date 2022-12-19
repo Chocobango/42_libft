@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:49:11 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:54:13 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:39:38 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,23 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+/* 
+int	main(void)
+{
+	unsigned char c;
+	c = '\0';
+	printf("%u or %c -> orig: %i, mine: %i\n", c, c, isalnum(c), ft_isalnum(c));
+	c = -15;
+	printf("%u or %c -> orig: %i, mine: %i\n", c, c, isalnum(c), ft_isalnum(c));
+	c = 255;
+	printf("%u or %c -> orig: %i, mine: %i\n", c, c, isalnum(c), ft_isalnum(c));
+	c = '9';
+	printf("%u or %c -> orig: %i, mine: %i\n", c, c, isalnum(c), ft_isalnum(c));
+	c = -15;
+	printf("%u or %c -> orig: %i, mine: %i\n", c, c, isalnum(c), ft_isalnum(c));
+	c = 53;
+	printf("%u or %c -> orig: %i, mine: %i\n", c, c, isalnum(c), ft_isalnum(c));
+
+	
+} 
+*/

@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 22:18:20 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:56:00 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 22:33:03 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,3 +64,29 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (res);
 }
+/* 
+void	test(char const *s, unsigned int start, size_t len)
+{
+    printf("\t'%s' from %u for %lu: '%s'\n",
+        s, start, len, ft_substr(s, start, len));
+}
+
+int	main(void)
+{
+    test("hello", 3, 10);
+    test("hello", 3, 0);
+    test("", 0, 0);
+    test("", 3, 15);
+    test("a", 3, 15);
+    test("", 0, 15);
+    test("", 15, 0);
+    test("hellllllllo", 5, 5);
+    test("hellllllllo", 5, 6);
+    test("hellllllllo", 5, 7);
+    test("hellllllllo", 5, 8);
+    test("hellllllllo", 20, 7);
+    test("hellllllllo", 2, 0);
+    test("hellllllllo", 0, 1);
+    return (0);
+}
+ */

@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:33:04 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/21 19:35:16 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 22:54:11 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,41 +17,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-/* 
-int	main(void)
-{
-	unsigned char c;
-	c = 'b';
-	printf("%u %i\n", c, isalpha(c));
-	c = 3;		
-	printf("%u %i\n", c, isalpha(c));
-	c = 'a';	
-	printf("%u %i\n", c, isalpha(c));
-	c = 'A';
-	printf("%u %i\n", c, isalpha(c));
-	c = -10;	
-	printf("%u %i\n", c, isalpha(c));
-	c = 100;	
-	printf("%u %i\n", c, isalpha(c));
-	c = '\0';	
-	printf("%u %i\n", c, isalpha(c));
-	c = 1150;	
-	printf("%u %i\n", c, isalpha(c));
-	c = 'b';
-	printf("%u %i\n", c, ft_isalpha(c));
-	c = 3;		
-	printf("%u %i\n", c, ft_isalpha(c));
-	c = 'a';	
-	printf("%u %i\n", c, ft_isalpha(c));
-	c = 'A';
-	printf("%u %i\n", c, ft_isalpha(c));
-	c = -10;	
-	printf("%u %i\n", c,  ft_isalpha(c));
-	c = 100;	
-	printf("%u %i\n", c,  ft_isalpha(c));
-	c = '\0';	
-	printf("%u %i\n", c,  ft_isalpha(c));
-	c = 1150;	
-	printf("%u %i\n", c,  ft_isalpha(c));
-}	
- */

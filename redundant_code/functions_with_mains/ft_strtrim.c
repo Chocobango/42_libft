@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:26:03 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:55:56 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:36:54 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,3 +79,33 @@ char	*ft_strtrim(char const *s1, char const *set)
 		res_len = 0;
 	return (ft_substr(s1, start_i, end_i - start_i + 1));
 }
+/* 
+void	ft_test(const char *input, char const *set, const char *reference)
+{
+	char	*trimmed_str;
+
+	trimmed_str = ft_strtrim(input, set);
+	if (!trimmed_str)
+	{
+		printf("Memory allocation error.\n");
+		exit(42);
+	}
+    printf("trimming '%s' from '%s': '%s' -> '%s'\n",
+        set, input, reference, trimmed_str);
+	free(trimmed_str);
+}
+
+
+int	main(void)
+{
+    ft_test("- ", " -h", "");
+    ft_test("", "", "");
+	ft_test("- -yulds.", " -.", "yulds");
+	ft_test("....- best   -", " -.", "best");
+	ft_test("O -. K", " -.", "O -. K");
+	ft_test("continue", " -.", "continue");
+	ft_test("break ;", " -.", "break ;");
+	ft_test(" One Night in Tokyo.", " -.", "One Night in Tokyo");
+    return (0);
+}
+ */

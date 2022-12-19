@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 15:13:11 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:54:23 by vvagapov         ###   ########.fr       */
+/*   Created: 2022/10/25 17:09:25 by vvagapov          #+#    #+#             */
+/*   Updated: 2022/11/12 17:37:50 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_isprint(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	return ((c >= 32 && c <= 63) || (c >= 64 && c <= 126));
 }
+
+/* 
+int	main(void)
+{
+	unsigned char	c;
+
+	c = '1';
+	printf("%u or %c -> orig: %i, mine: %i\n", c, c, isprint(c), ft_isprint(c));
+	return(0);
+}
+ */
