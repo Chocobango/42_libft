@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:16:59 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/11/21 20:19:51 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 22:36:43 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char		*d;
 	const char	*s;
 
- 	if (!dst && !src)
+	if (!dst && !src)
 		return (NULL);
 	i = 0;
 	d = dst;

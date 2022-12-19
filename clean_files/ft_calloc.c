@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 21:09:36 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 17:28:30 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 22:37:33 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	num_of_bytes = size * count;
 	if (size && count && (num_of_bytes % size || num_of_bytes % count))
-			return (NULL);
+		return (NULL);
 	res = malloc(num_of_bytes);
 	if (!res)
 	{

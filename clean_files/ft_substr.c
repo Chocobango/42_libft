@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 22:18:20 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 17:36:46 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 22:33:03 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*res;
 
 	if (!s)
-        return (NULL);
-    s_len = ft_strlen(s);
+		return (NULL);
+	s_len = ft_strlen(s);
 	if (s_len < start)
 		res_len = 0;
 	else

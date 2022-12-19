@@ -1,9 +1,9 @@
 = Host-specific information ====================================================
 $> hostname; uname -msr
-c2r4p1.hive.fi
+c2r2p11.hive.fi
 Darwin 18.7.0 x86_64
 $> date
-Mon Dec 19 16:59:33 EET 2022
+Mon Dec 19 22:43:00 EET 2022
 $> gcc --version
 Apple clang version 11.0.0 (clang-1100.0.33.17)
 Target: x86_64-apple-darwin18.7.0
@@ -67,7 +67,7 @@ a - ft_lstiter.o
 a - ft_lstmap.o
 
 $> ls -la libft.a
--rw-r--r--  1 vvagapov  2020  40360 Dec 19 16:59 /Users/vvagapov/42/libft/github/testing/libft-war-machine/dirlibft/libft.a
+-rw-r--r--  1 vvagapov  2020  40728 Dec 19 22:43 /Users/vvagapov/42/libft/github/testing/libft-war-machine/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
@@ -98,9 +98,6 @@ Diff OK :D
 
 = ft_bzero.c ===================================================================
 $> norminette ft_bzero.c | grep -E '(Error|Warning)'
-../../clean_files/ft_bzero.c: Error!
-Error: MISALIGNED_VAR_DECL  (line:  18, col:  13):	Misaligned variable declaration
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_bzero.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -129,11 +126,6 @@ Diff OK :D
 
 = ft_memcpy.c ==================================================================
 $> norminette ft_memcpy.c | grep -E '(Error|Warning)'
-../../clean_files/ft_memcpy.c: Error!
-Error: TOO_FEW_TAB          (line:  26, col:   1):	Missing tabs for indent level
-Error: SPACE_REPLACE_TAB    (line:  26, col:   2):	Found space when expecting tab
-Error: BRACE_SHOULD_EOL     (line:  37, col:   1):	Expected newline after brace
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memcpy.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -154,9 +146,6 @@ Diff OK :D
 
 = ft_memmove.c =================================================================
 $> norminette ft_memmove.c | grep -E '(Error|Warning)'
-../../clean_files/ft_memmove.c: Error!
-Error: TOO_MANY_LINES       (line:  45, col:   1):	Function has more than 25 lines
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memmove.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -187,9 +176,6 @@ Diff OK :D
 
 = ft_memchr.c ==================================================================
 $> norminette ft_memchr.c | grep -E '(Error|Warning)'
-../../clean_files/ft_memchr.c: Error!
-Error: BRACE_SHOULD_EOL     (line:  31, col:   1):	Expected newline after brace
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memchr.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -985,9 +971,6 @@ Diff OK :D
 
 = ft_strmapi.c =================================================================
 $> norminette ft_strmapi.c | grep -E '(Error|Warning)'
-../../clean_files/ft_strmapi.c: Error!
-Error: RETURN_PARENTHESIS   (line:  21, col:  16):	Return value must be in parenthesis
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strmapi.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -998,11 +981,6 @@ Diff OK :D
 
 = ft_substr.c ==================================================================
 $> norminette ft_substr.c | grep -E '(Error|Warning)'
-../../clean_files/ft_substr.c: Error!
-Error: TOO_FEW_TAB          (line:  49, col:   1):	Missing tabs for indent level
-Error: SPACE_REPLACE_TAB    (line:  49, col:   9):	Found space when expecting tab
-Error: SPACE_REPLACE_TAB    (line:  50, col:   5):	Found space when expecting tab
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_substr.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -1278,14 +1256,7 @@ Diff OK :D
 
 = ft_putnbr_fd.c ===============================================================
 $> norminette ft_putnbr_fd.c | grep -E '(Error|Warning)'
-../../clean_files/ft_putnbr_fd.c: Error!
-Error: SPACE_EMPTY_LINE     (line:  18, col:   1):	Space on empty line
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putnbr_fd.c main.c libft.a -o user_exe
-
-Forbidden function call in 'ft_putnbr_fd.c':
-U_free
-U_malloc
 
 = Test 1 ===================================================
 $> ./user_exe 01

@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 20:52:45 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 17:32:27 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/19 22:40:04 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			d[i] = s[i];
 			i++;
 		}
+		return (dst);
 	}
-	else
+	while (len)
 	{
-		while (len)
-		{
-			d[len - 1] = s[len - 1];
-			len--;
-		}
+		d[len - 1] = s[len - 1];
+		len--;
 	}
 	return (dst);
 }
