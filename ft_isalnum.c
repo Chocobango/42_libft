@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:49:11 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:54:13 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/21 17:36:59 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@ int	ft_isalnum(int c)
 	unsigned char	uc;
 
 	uc = (unsigned char)c;
-	if ((uc >= '0' && uc <= '9') || (uc >= 'A' && uc <= 'Z')
-		|| (uc >= 'a' && uc <= 'z'))
-		return (1);
-	else
-		return (0);
+	return ((uc >= '0' && uc <= '9') || (uc >= 'A' && uc <= 'Z')
+		|| (uc >= 'a' && uc <= 'z'));
 }

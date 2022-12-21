@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:43:37 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:55:43 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/21 17:40:09 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	dst_len = 0;
 	while ((dst_len < dstsize) && dst[dst_len])
-	{
 		dst_len++;
-	}
 	i = 0;
 	while ((dst_len + i + 1) < (dstsize) && src[i])
 	{
@@ -38,12 +36,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	if (dst_len < dstsize)
-	{
 		dst[dst_len + i] = '\0';
-	}
 	while (src[i])
-	{
 		i++;
-	}
 	return (i + dst_len);
 }

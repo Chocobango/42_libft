@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:34:31 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:55:46 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/21 17:40:15 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	if (dstsize > 0)
 		dst[i] = '\0';
 	while (src[i])
-	{
 		i++;
-	}
 	return (i);
 }

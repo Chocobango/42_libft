@@ -6,7 +6,7 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 19:31:08 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:17:20 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/21 17:38:43 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 		n *= -1;
 	}
 	if (n < 10)
-	{
 		ft_putchar_fd('0' + n, fd);
-	}
 	else
 	{
 		ft_putnbr_fd(n / 10, fd);

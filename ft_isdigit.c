@@ -6,14 +6,11 @@
 /*   By: vvagapov <vvagapov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:13:11 by vvagapov          #+#    #+#             */
-/*   Updated: 2022/12/19 22:54:23 by vvagapov         ###   ########.fr       */
+/*   Updated: 2022/12/21 17:37:24 by vvagapov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	return (c >= '0' && c <= '9');
 }
