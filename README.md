@@ -1,14 +1,14 @@
-🚧 Work in progress 🚧
-
 # libft | school 42
 
 My version of school 42 libft project created at [Hive Helsinki](https://www.hive.fi/en/)
 
+Passed with 125/100
+
 ## About
 
-The aim of the project is to build a C library. It is composed of some recreated standard C library functions, some additional non-standard functions, and an implementaion of a singly linked list with a set of functions.
+The aim of the project is to build a C library. The library is comprised of some standard C library functions recreated by me as well as some additional non-standard functions. It also features a bonus part, which is an implementaion of a singly linked list with a set of functions to manipulate it.
 
-### The following functions from standard C library were recreated:
+### Functions from standard C library that were recreated
 
 - isalpha
 - isdigit
@@ -33,6 +33,10 @@ The aim of the project is to build a C library. It is composed of some recreated
 - atoi
 - calloc
 - strdup
+
+### Additional functions
+
+### Linked list (bonus)
 
 ## How to compile
 
