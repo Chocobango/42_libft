@@ -1,8 +1,8 @@
 # libft | school 42
 
-My version of school 42 libft project created at [Hive Helsinki](https://www.hive.fi/en/)
+✅ Passed with 125/100
 
-Passed with 125/100
+My version of school 42 libft project created at [Hive Helsinki](https://www.hive.fi/en/)
 
 ## About
 
