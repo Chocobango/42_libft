@@ -40,9 +40,9 @@ The aim of the project is to build a C library. The library is comprised of some
 
 ## How to compile the library
 
-- clone the repo and cd into it
-- run `make`
-- to include bonus functions (linked list), run `bonus`
+- Clone the repo and cd into it
+- Run `make`
+- To include bonus functions (linked list), run `bonus`
 
 ### To use the library in your project
 
