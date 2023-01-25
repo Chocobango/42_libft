@@ -38,7 +38,7 @@ The aim of the project is to build a C library. The library is comprised of some
 
 ### Linked list (bonus)
 
-## How to compile
+## How to compile the library
 
 - clone the repo and cd into it
 - run `make`
