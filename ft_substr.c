@@ -51,8 +51,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		res_len = 0;
 	else
 		res_len = min(len, s_len - start);
-	if (res_len < 0)
-		res_len = 0;
+	/*if (res_len < 0)
+		res_len = 0;*/
 	res = malloc(sizeof(char) * res_len + 1);
 	if (!res)
 		return (NULL);

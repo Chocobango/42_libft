@@ -67,15 +67,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start_i;
 	size_t	end_i;
-	size_t	res_len;
+	//size_t	res_len;
 
 	if (!s1 || !set)
 		return (NULL);
 	start_i = index_start(s1, set);
 	end_i = index_end(s1, set);
-	if (start_i >= end_i)
+	/*if (start_i >= end_i)
 		res_len = end_i - start_i;
 	else
-		res_len = 0;
+		res_len = 0;*/
 	return (ft_substr(s1, start_i, end_i - start_i + 1));
 }
